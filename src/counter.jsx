@@ -6,21 +6,35 @@ class CountClick extends React.Component {
         super(props);
         this.state = {count: 0};
     }
+
     add() {
         this.setState({count: this.state.count + 1})
+        this.props.updateSumCount(1);
+
         console.log(this.state.count);
     }
+
     sub() {
         this.setState({count: this.state.count - 1})
+        this.props.updateSumCount(-1);
         console.log(this.state.count);
     }
+
     render() {
         return (<div>
             <button onClick={(this.sub).bind(this)}>-</button>
             <button onClick={(this.add).bind(this)}>+</button>
-            <span>   count:   {this.state.count}</span>
+            <span>   count: {this.state.count}</span>
         </div>)
     }
+
+    // counter() {
+    //     return (<div>
+    //         <button onClick={(this.sub).bind(this)}>-</button>
+    //         <button onClick={(this.add).bind(this)}>+</button>
+    //         <span>   count: {this.state.count}</span>
+    //     </div>)
+    // }
 }
 
 export default CountClick;
