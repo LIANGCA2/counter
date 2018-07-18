@@ -12,9 +12,9 @@ class App extends Component {
         }
     }
 
-    couterNum=(event)=>{
-        this.setState({couterNumber: event.target.value});
-    }
+    // couterNum=(event)=>{
+    //     this.setState({couterNumber: event.target.value});
+    // }
 
   render() {
 
@@ -25,11 +25,11 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-            <input type = "text" onChange={(this.couterNum).bind(this)}></input>
+            {/*<input type = "text" onChange={(this.couterNum).bind(this)}></input>*/}
             {/*<div>{this.state.couterNumber}</div>*/}
 
         </p>
-          <div><Group number = {this.state.couterNumber}/></div>
+          <div><Group /></div>
       </div>
     );
   }

@@ -5,9 +5,18 @@ class Group extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            sumCount: 0
+            sumCount: 0,
+            couterNumber:0
         }
     }
+
+    couterNum=(event)=>{
+        if(event.target.value==""){
+            this.setState({sumCount: 0});
+        }
+        this.setState({couterNumber: event.target.value});
+    }
+
 
     updateSumCount = (count) => {
         this.setState({sumCount: this.state.sumCount + count})
@@ -15,13 +24,15 @@ class Group extends React.Component {
 
     render() {
         var allCounter = [];
-        for (var i = 0; i < this.props.number; i++) {
+        for (var i = 0; i < this.state.couterNumber; i++) {
             allCounter.push(<CountClick updateSumCount={(e) => this.updateSumCount(e)} key={i}/>);
         }
         return (<div>
-
+                <input type = "text" onChange={(this.couterNum).bind(this)}></input>
                 {allCounter}
-                <p>{this.state.sumCount}</p>
+                <p >{this.state.sumCount}
+
+                </p>
             </div>
         )
     }
