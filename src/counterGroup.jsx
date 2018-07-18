@@ -18,6 +18,9 @@ class Group extends React.Component {
     }
 
 
+
+
+
     updateSumCount = (count) => {
         this.setState({sumCount: this.state.sumCount + count})
     }
@@ -25,7 +28,7 @@ class Group extends React.Component {
     render() {
         var allCounter = [];
         for (var i = 0; i < this.state.couterNumber; i++) {
-            allCounter.push(<CountClick updateSumCount={(e) => this.updateSumCount(e)} key={i}/>);
+            allCounter.push(<CountClick updateSumCount={(e) => this.updateSumCount(e)} git{i}/>);
         }
         return (<div>
                 <input type = "text" onChange={(this.couterNum).bind(this)}></input>
@@ -36,6 +39,12 @@ class Group extends React.Component {
             </div>
         )
     }
+
+
+
+
+
+
 }
 
 export default Group;
