@@ -8,7 +8,7 @@ class App extends Component {
     constructor(props){
         super();
         this.state = {
-            couterNumber:1
+            couterNumber:0
         }
     }
 
@@ -27,9 +27,9 @@ class App extends Component {
         <p className="App-intro">
             <input type = "text" onChange={(this.couterNum).bind(this)}></input>
             {/*<div>{this.state.couterNumber}</div>*/}
-            <div><Group number = {this.state.couterNumber}/></div>
-            <div></div>
+
         </p>
+          <div><Group number = {this.state.couterNumber}/></div>
       </div>
     );
   }

@@ -21,11 +21,11 @@ class CountClick extends React.Component {
     }
 
     render() {
-        return (<div>
+        return (<p>
             <button onClick={(this.sub).bind(this)}>-</button>
             <button onClick={(this.add).bind(this)}>+</button>
             <span>   count: {this.state.count}</span>
-        </div>)
+        </p>)
     }
 
     // counter() {
